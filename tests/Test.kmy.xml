@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE KMYMONEY-FILE>
+<KMYMONEY-FILE>
+ <FILEINFO>
+  <CREATION_DATE date="2020-12-13"/>
+  <LAST_MODIFIED_DATE date="2020-12-13"/>
+  <VERSION id="1"/>
+  <FIXVERSION id="5"/>
+ </FILEINFO>
+ <USER name="Your name" email="Email">
+  <ADDRESS telephone="Telephone" county="CountyState" city="Town" zipcode="PostalCode" street="Street"/>
+ </USER>
+ <INSTITUTIONS count="1">
+  <INSTITUTION sortcode="Routing number" manager="" name="Name of the institution" id="I000001">
+   <ADDRESS telephone="" city="" zip="" street=""/>
+   <ACCOUNTIDS>
+    <ACCOUNTID id="A000001"/>
+    <ACCOUNTID id="A000003"/>
+   </ACCOUNTIDS>
+  </INSTITUTION>
+ </INSTITUTIONS>
+ <PAYEES count="3">
+  <PAYEE reference="" name="Some From" email="who@ville.tld" notes="some notes here" id="P000001" matchingenabled="0">
+   <ADDRESS telephone="+1 312 123 4567" state="WH" city="Whoville" street="123 Street&#xa;42 Something" postcode="WHO 123"/>
+  </PAYEE>
+  <PAYEE reference="" name="Baz Money" email="" id="P000002" matchingenabled="0">
+   <ADDRESS telephone="" state="" city="" street="" postcode=""/>
+  </PAYEE>
+  <PAYEE reference="" name="Forward" email="" id="P000003" matchingenabled="0">
+   <ADDRESS telephone="" state="" city="" street="" postcode=""/>
+  </PAYEE>
+ </PAYEES>
+ <COSTCENTERS count="0"/>
+ <TAGS count="1">
+  <TAG closed="0" tagcolor="#000000" name="Bar Tag" id="G000001"/>
+ </TAGS>
+ <ACCOUNTS count="11">
+  <ACCOUNT number="" lastmodified="" institution="" name="Asset" currency="USD" parentaccount="" lastreconciled="" description="" type="9" opened="" id="AStd::Asset">
+   <SUBACCOUNTS>
+    <SUBACCOUNT id="A000001"/>
+   </SUBACCOUNTS>
+  </ACCOUNT>
+  <ACCOUNT number="" lastmodified="" institution="" name="Liability" currency="USD" parentaccount="" lastreconciled="" description="" type="10" opened="" id="AStd::Liability">
+   <SUBACCOUNTS>
+    <SUBACCOUNT id="A000003"/>
+   </SUBACCOUNTS>
+  </ACCOUNT>
+  <ACCOUNT number="" lastmodified="" institution="" name="Expense" currency="USD" parentaccount="" lastreconciled="" description="" type="13" opened="" id="AStd::Expense">
+   <SUBACCOUNTS>
+    <SUBACCOUNT id="A000006"/>
+   </SUBACCOUNTS>
+  </ACCOUNT>
+  <ACCOUNT number="" lastmodified="" institution="" name="Income" currency="USD" parentaccount="" lastreconciled="" description="" type="12" opened="" id="AStd::Income">
+   <SUBACCOUNTS>
+    <SUBACCOUNT id="A000004"/>
+    <SUBACCOUNT id="A000005"/>
+   </SUBACCOUNTS>
+  </ACCOUNT>
+  <ACCOUNT number="" lastmodified="" institution="" name="Equity" currency="USD" parentaccount="" lastreconciled="" description="" type="16" opened="" id="AStd::Equity">
+   <SUBACCOUNTS>
+    <SUBACCOUNT id="A000002"/>
+   </SUBACCOUNTS>
+  </ACCOUNT>
+  <ACCOUNT number="Number of the account" lastmodified="2020-12-13" institution="I000001" name="Name of the account" currency="USD" parentaccount="AStd::Asset" lastreconciled="" description="" type="1" opened="2020-01-01" id="A000001"/>
+  <ACCOUNT number="" lastmodified="2020-12-13" institution="" name="Opening Balances" currency="USD" parentaccount="AStd::Equity" lastreconciled="" description="" type="16" opened="2020-01-01" id="A000002">
+   <KEYVALUEPAIRS>
+    <PAIR key="OpeningBalanceAccount" value="Yes"/>
+   </KEYVALUEPAIRS>
+  </ACCOUNT>
+  <ACCOUNT number="Other Account number" lastmodified="2020-12-13" institution="I000001" name="Other Account name" currency="USD" parentaccount="AStd::Liability" lastreconciled="" description="" type="10" opened="2020-01-01" id="A000003">
+   <KEYVALUEPAIRS>
+    <PAIR key="iban" value="IBAN"/>
+   </KEYVALUEPAIRS>
+  </ACCOUNT>
+  <ACCOUNT number="" lastmodified="" institution="" name="Foo Income" currency="USD" parentaccount="AStd::Income" lastreconciled="" description="" type="12" opened="1900-01-01" id="A000004"/>
+  <ACCOUNT number="" lastmodified="2020-12-13" institution="" name="Mystery Money" currency="USD" parentaccount="AStd::Income" lastreconciled="" description="" type="12" opened="1900-01-01" id="A000005"/>
+  <ACCOUNT number="" lastmodified="2020-12-13" institution="" name="Karma" currency="USD" parentaccount="AStd::Expense" lastreconciled="" description="" type="13" opened="1900-01-01" id="A000006"/>
+ </ACCOUNTS>
+ <TRANSACTIONS count="5">
+  <TRANSACTION postdate="2020-01-01" memo="" commodity="USD" entrydate="2020-12-13" id="T000000000000000001">
+   <SPLITS>
+    <SPLIT payee="" memo="" shares="42/1" number="" action="" price="1/1" account="A000001" reconcileflag="0" bankid="" value="42/1" reconciledate="" id="S0001"/>
+    <SPLIT payee="" memo="" shares="-42/1" number="" action="" price="1/1" account="A000002" reconcileflag="0" bankid="" value="-42/1" reconciledate="" id="S0002"/>
+   </SPLITS>
+  </TRANSACTION>
+  <TRANSACTION postdate="2020-01-01" memo="" commodity="USD" entrydate="2020-12-13" id="T000000000000000002">
+   <SPLITS>
+    <SPLIT payee="" memo="" shares="-42/1" number="" action="" price="1/1" account="A000003" reconcileflag="0" bankid="" value="-42/1" reconciledate="" id="S0001"/>
+    <SPLIT payee="" memo="" shares="42/1" number="" action="" price="1/1" account="A000002" reconcileflag="0" bankid="" value="42/1" reconciledate="" id="S0002"/>
+   </SPLITS>
+  </TRANSACTION>
+  <TRANSACTION postdate="2020-12-13" memo="" commodity="USD" entrydate="2020-12-13" id="T000000000000000003">
+   <SPLITS>
+    <SPLIT payee="P000002" memo="Pay it off" shares="1/1" number="" action="" price="1/1" account="A000001" reconcileflag="2" bankid="" value="1/1" reconciledate="2020-12-13" id="S0001"/>
+    <SPLIT payee="P000002" memo="Pay it off" shares="-1/1" number="" action="" price="1/1" account="A000005" reconcileflag="0" bankid="" value="-1/1" reconciledate="" id="S0002"/>
+   </SPLITS>
+  </TRANSACTION>
+  <TRANSACTION postdate="2020-12-14" memo="" commodity="USD" entrydate="2020-12-13" id="T000000000000000004">
+   <SPLITS>
+    <SPLIT payee="P000002" memo="" shares="2/1" number="" action="" price="1/1" account="A000001" reconcileflag="1" bankid="" value="2/1" reconciledate="" id="S0001"/>
+    <SPLIT payee="P000002" memo="" shares="-2/1" number="" action="" price="1/1" account="A000005" reconcileflag="0" bankid="" value="-2/1" reconciledate="" id="S0002"/>
+   </SPLITS>
+  </TRANSACTION>
+  <TRANSACTION postdate="2020-12-15" memo="" commodity="USD" entrydate="2020-12-13" id="T000000000000000005">
+   <SPLITS>
+    <SPLIT payee="P000003" memo="Keep the universe in balance" shares="0/1" number="" action="" price="1/1" account="A000001" reconcileflag="0" bankid="" value="0/1" reconciledate="" id="S0001"/>
+    <SPLIT payee="P000003" memo="Keep the universe in balance" shares="0/1" number="" action="" price="1/1" account="A000006" reconcileflag="0" bankid="" value="0/1" reconciledate="" id="S0002"/>
+   </SPLITS>
+  </TRANSACTION>
+ </TRANSACTIONS>
+ <KEYVALUEPAIRS>
+  <PAIR key="kmm-baseCurrency" value="USD"/>
+  <PAIR key="kmm-id" value="{f6b422de-f1b0-43c7-b6da-2ce71e2ed2e6}"/>
+ </KEYVALUEPAIRS>
+ <SCHEDULES count="1">
+  <SCHEDULED_TX lastDayInMonth="0" occurenceMultiplier="2" fixed="0" occurence="4" paymentType="8" endDate="" startDate="2020-12-13" autoEnter="0" name="Schedule name" type="2" weekendOption="2" id="SCH000001" lastPayment="">
+   <PAYMENTS/>
+   <TRANSACTION postdate="2020-12-13" memo="" commodity="USD" entrydate="" id="">
+    <SPLITS>
+     <SPLIT payee="P000001" memo="The Memo" shares="0/1" number="" action="" price="1/1" account="A000001" reconcileflag="0" bankid="" value="0/1" reconciledate="" id="S0001">
+      <TAG id="G000001"/>
+     </SPLIT>
+     <SPLIT payee="" memo="The Memo" shares="0/1" number="" action="" price="1/1" account="A000004" reconcileflag="0" bankid="" value="0/1" reconciledate="" id="S0002"/>
+    </SPLITS>
+   </TRANSACTION>
+  </SCHEDULED_TX>
+ </SCHEDULES>
+ <SECURITIES count="0"/>
+ <CURRENCIES count="1">
+  <CURRENCY rounding-method="7" saf="100" pp="4" name="US Dollar" scf="100" symbol="$" type="3" id="USD"/>
+ </CURRENCIES>
+ <PRICES count="0"/>
+ <REPORTS count="0"/>
+ <BUDGETS count="0"/>
+ <ONLINEJOBS count="0"/>
+</KMYMONEY-FILE>

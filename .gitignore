@@ -1,0 +1,6 @@
+/venv/
+/kmy.egg-info/
+/dist/
+/build/
+/.idea/
+/**/__pycache__/
