@@ -1,8 +1,8 @@
 class Address:
     def __init__(self):
-        self.city: str or None = None
-        self.street: str or None = None
-        self.telephone: str or None = None
+        self.city: str = ""
+        self.street: str = ""
+        self.telephone: str = ""
 
     @classmethod
     def from_xml(cls, node):

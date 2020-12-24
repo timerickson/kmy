@@ -1,9 +1,9 @@
 class FileInfo:
     def __init__(self):
-        self.creationDate: str or None = None
-        self.lastModifiedDate: str or None = None
-        self.version: str or None = None
-        self.fixVersion: str or None = None
+        self.creationDate: str = ""
+        self.lastModifiedDate: str = ""
+        self.version: str = ""
+        self.fixVersion: str = ""
 
     @classmethod
     def from_xml(cls, node):

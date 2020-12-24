@@ -1,22 +1,21 @@
 from typing import List
 
-from .payeeaddress import PayeeAddress
 from .subaccount import SubAccount
 
 
 class Account:
     def __init__(self):
-        self.number: str or None = None
-        self.lastModified: str or None = None
-        self.institution: str or None = None
-        self.name: str or None = None
-        self.currency: str or None = None
-        self.parentAccount: str or None = None
-        self.lastReconciled: str or None = None
-        self.description: str or None = None
-        self.type: str or None = None
-        self.opened: str or None = None
-        self.id: str or None = None
+        self.number: str = ""
+        self.lastModified: str = ""
+        self.institution: str = ""
+        self.name: str = ""
+        self.currency: str = ""
+        self.parentAccount: str = ""
+        self.lastReconciled: str = ""
+        self.description: str = ""
+        self.type: str = ""
+        self.opened: str = ""
+        self.id: str = ""
         self.subAccounts: List[SubAccount] = []
 
     @classmethod

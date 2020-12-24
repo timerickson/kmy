@@ -4,8 +4,8 @@ from .address import Address
 class PayeeAddress(Address):
     def __init__(self):
         super().__init__()
-        self.postCode: str or None = None
-        self.state: str or None = None
+        self.postCode: str = ""
+        self.state: str = ""
 
     @classmethod
     def from_xml(cls, node):
@@ -17,4 +17,3 @@ class PayeeAddress(Address):
         super().init_from_xml(node)
         self.postCode = node.attrib['postcode']
         self.state = node.attrib['state']
-

@@ -5,11 +5,11 @@ from .split import Split
 
 class Transaction:
     def __init__(self):
-        self.postDate: str or None = None
-        self.memo: str or None = None
-        self.commodity: str or None = None
-        self.entryDate: str or None = None
-        self.id: str or None = None
+        self.postDate: str = ""
+        self.memo: str = ""
+        self.commodity: str = ""
+        self.entryDate: str = ""
+        self.id: str = ""
         self.splits: List[Split] = []
 
     @classmethod

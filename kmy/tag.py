@@ -1,12 +1,9 @@
-from .payeeaddress import PayeeAddress
-
-
 class Tag:
     def __init__(self):
         self.closed: bool = False
-        self.tagColor: str or None = None
-        self.name: str or None = None
-        self.id: str or None = None
+        self.tagColor: str = ""
+        self.name: str = ""
+        self.id: str = ""
 
     @classmethod
     def from_xml(cls, node):

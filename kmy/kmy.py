@@ -1,5 +1,5 @@
 import gzip
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as elementTree
 from typing import List
 
 from .account import Account
@@ -14,8 +14,8 @@ from .user import User
 
 class Kmy:
     def __init__(self):
-        self.fileInfo: FileInfo or None = None
-        self.user: User or None = None
+        self.fileInfo: FileInfo = FileInfo()
+        self.user: User = User()
         self.institutions: List[Institution] = []
         self.payees: List[Payee] = []
         self.costCenters: List[CostCenter] = []
@@ -60,7 +60,7 @@ class Kmy:
     @classmethod
     def from_kmy_file(cls, file_name):
         with gzip.open(file_name, 'rb') as file:
-            tree = ET.parse(file)
+            tree = elementTree.parse(file)
         root = tree.getroot()
         kmm = Kmy.from_xml(root)
         return kmm

@@ -3,12 +3,12 @@ from .payeeaddress import PayeeAddress
 
 class Payee:
     def __init__(self):
-        self.reference: str or None = None
-        self.name: str or None = None
-        self.email: str or None = None
-        self.id: str or None = None
+        self.reference: str = ""
+        self.name: str = ""
+        self.email: str = ""
+        self.id: str = ""
         self.matchingEnabled: bool = False
-        self.address: PayeeAddress or None = None
+        self.address: PayeeAddress = PayeeAddress()
 
     @classmethod
     def from_xml(cls, node):

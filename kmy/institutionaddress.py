@@ -1,10 +1,10 @@
-from kmy.address import Address
+from .address import Address
 
 
 class InstitutionAddress(Address):
     def __init__(self):
         super().__init__()
-        self.zip: str or None = None
+        self.zip: str = ""
 
     @classmethod
     def from_xml(cls, node):

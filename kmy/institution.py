@@ -1,15 +1,15 @@
 from typing import List
 
-from kmy.institutionaddress import InstitutionAddress
+from .institutionaddress import InstitutionAddress
 
 
 class Institution:
     def __init__(self):
-        self.id: str or None = None
-        self.sortcode: str or None = None
-        self.name: str or None = None
-        self.manager: str or None = None
-        self.address: InstitutionAddress or None = None
+        self.id: str = ""
+        self.sortCode: str = ""
+        self.name: str = ""
+        self.manager: str = ""
+        self.address: InstitutionAddress = InstitutionAddress()
         self.accountIds: List[str] = []
         self.keyValuePairs = []
 
@@ -21,7 +21,7 @@ class Institution:
 
     def init_from_xml(self, node):
         self.id = node.attrib['id']
-        self.sortcode = node.attrib['sortcode']
+        self.sortCode = node.attrib['sortcode']
         self.name = node.attrib['name']
         self.manager = node.attrib['manager']
         address_node = node.find('ADDRESS')

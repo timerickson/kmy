@@ -1,9 +1,6 @@
-from kmy.institutionaddress import InstitutionAddress
-
-
 class SubAccount:
     def __init__(self):
-        self.id: str or None = None
+        self.id: str = ""
 
     @classmethod
     def from_xml(cls, node):
