@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 DESCRIPTION = 'KMyMoney (.kmy) file parser'
 URL = 'https://github.com/timerickson/kmy'
 LONG_DESCRIPTION = 'A simply library to read and provide typed access to KMyMoney data in .kmy files.' \
