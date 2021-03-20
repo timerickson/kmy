@@ -13,6 +13,9 @@ class Split:
         self.reconcileDate: str = ""
         self.id: str = ""
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}(payee='{self.payee}', value='{self.value}')"
+
     @classmethod
     def from_xml(cls, node):
         split = cls()

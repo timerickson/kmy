@@ -10,6 +10,9 @@ class Payee:
         self.matchingEnabled: bool = False
         self.address: PayeeAddress = PayeeAddress()
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}(name='{self.name}')"
+
     @classmethod
     def from_xml(cls, node):
         payee = cls()
