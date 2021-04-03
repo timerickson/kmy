@@ -5,6 +5,9 @@ class Tag:
         self.name: str = ""
         self.id: str = ""
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}(name='{self.name}')"
+
     @classmethod
     def from_xml(cls, node):
         tag = cls()

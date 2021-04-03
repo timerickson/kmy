@@ -12,6 +12,9 @@ class Transaction:
         self.id: str = ""
         self.splits: List[Split] = []
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}(postDate='{self.postDate}', memo='{self.memo}')"
+
     @classmethod
     def from_xml(cls, node):
         transaction = cls()

@@ -23,6 +23,9 @@ class Kmy:
         self.accounts: List[Account] = []
         self.transactions: List[Transaction] = []
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}(fileInfo='{self.fileInfo}', user={self.user})"
+
     @classmethod
     def from_xml(cls, node):
         kmy: Kmy = cls()

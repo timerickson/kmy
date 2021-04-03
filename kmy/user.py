@@ -7,6 +7,9 @@ class User(object):
         self.name: str = ""
         self.address: UserAddress = UserAddress()
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}(name='{self.name}')"
+
     @classmethod
     def from_xml(cls, node):
         user = cls()

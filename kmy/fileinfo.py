@@ -5,6 +5,9 @@ class FileInfo:
         self.version: str = ""
         self.fixVersion: str = ""
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}(creationDate='{self.creationDate}', lastModifiedDate={self.lastModifiedDate})"
+
     @classmethod
     def from_xml(cls, node):
         file_info = cls()
