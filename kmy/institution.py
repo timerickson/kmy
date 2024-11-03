@@ -1,6 +1,8 @@
+from typing import Dict
 from typing import List
 
 from .institutionaddress import InstitutionAddress
+from .pairs import pairs_dict_from_xml
 
 
 class Institution:
@@ -11,7 +13,7 @@ class Institution:
         self.manager: str = ""
         self.address: InstitutionAddress = InstitutionAddress()
         self.accountIds: List[str] = []
-        self.keyValuePairs = []
+        self.keyValuePairs: Dict[str, str] = {}
 
     def __repr__(self):
         return f"{self.__class__.__name__}(name='{self.name}')"
@@ -33,3 +35,4 @@ class Institution:
         account_id_nodes = node.find('ACCOUNTIDS')
         for account_id_node in account_id_nodes:
             self.accountIds.append(account_id_node.attrib['id'])
+        self.keyValuePairs = pairs_dict_from_xml(node.find('KEYVALUEPAIRS'))

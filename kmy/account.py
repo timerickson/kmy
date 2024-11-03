@@ -1,5 +1,7 @@
+from typing import Dict
 from typing import List
 
+from .pairs import pairs_dict_from_xml
 from .subaccount import SubAccount
 
 
@@ -17,6 +19,7 @@ class Account:
         self.opened: str = ""
         self.id: str = ""
         self.subAccounts: List[SubAccount] = []
+        self.keyValuePairs: Dict[str, str] = {}
 
     def __repr__(self):
         return f"{self.__class__.__name__}(name='{self.name}', currency={self.currency})"
@@ -44,3 +47,4 @@ class Account:
             for subaccount_node in subaccount_nodes:
                 subaccount = SubAccount.from_xml(subaccount_node)
                 self.subAccounts.append(subaccount)
+        self.keyValuePairs = pairs_dict_from_xml(node.find('KEYVALUEPAIRS'))
